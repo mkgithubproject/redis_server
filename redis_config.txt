@@ -1,0 +1,23 @@
+Step 1: Update Your System
+  -> sudo apt update
+
+Step 2: Install Redis Server
+  -> sudo apt install redis-server -y
+
+Step 3: Enable and Start Redis
+  -> Enable Redis to start on boot:
+       -> sudo systemctl enable redis
+       -> Start the Redis service:
+            -> sudo systemctl start redis
+
+ Step 4: Check if Redis is Running
+  -> sudo systemctl status redis
+
+
+🧪 Step 5: Test Redis
+     -> Run the Redis CLI:
+         -> redis-cli
+             -> ping
+
+sudo systemctl restart redis
+
