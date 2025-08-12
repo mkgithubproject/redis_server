@@ -11,7 +11,7 @@ Step 3: Enable and Start Redis
   -> Enable Redis to start on boot:
        -> sudo systemctl enable redis
        -> Start the Redis service:
-            -> sudo systemctl start redis
+            -> sudo systemctl start redis // runs the server in backgroud , if u do redis-server on terminal it will go down when u shut  the                                                 //termianal
 
  Step 4: Check if Redis is Running
   -> sudo systemctl status redis
