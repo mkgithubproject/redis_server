@@ -1,4 +1,76 @@
-Got it — if you’re on a **Linux setup** (without Homebrew), you can install Redis directly from the package manager and then connect it with Node.js.
+`redis-cli` is the **official command-line interface (CLI) tool for Redis**.
+It’s basically a small program that lets you connect to a Redis server and run Redis commands directly from your terminal — without needing to write code.
+
+---
+
+### **Key points about `redis-cli`**
+
+* Comes bundled with the Redis installation (when you install Redis locally or on a server, you usually get `redis-cli` with it).
+* Lets you **connect** to a Redis server (local or remote).
+* Lets you **run commands interactively** or in scripts.
+* Useful for **debugging, testing, and managing** Redis.
+
+---
+
+### **How it works**
+
+When you type:
+
+```bash
+redis-cli
+```
+
+You enter an **interactive mode** where you can run commands like:
+
+```bash
+set name "Mohit"
+get name
+keys *
+```
+
+Or you can run a single command without going into interactive mode:
+
+```bash
+redis-cli ping
+```
+
+---
+
+### **Example session**
+
+```bash
+$ redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> set user:1 "John"
+OK
+127.0.0.1:6379> get user:1
+"John"
+127.0.0.1:6379> del user:1
+(integer) 1
+```
+
+---
+
+### **Common uses of `redis-cli`**
+
+1. **Check connection** → `ping`
+2. **Insert data** → `set key value`
+3. **Retrieve data** → `get key`
+4. **List keys** → `keys *`
+5. **Monitor commands in real-time** → `monitor`
+6. **Flush all data** → `flushall` (dangerous in prod!)
+
+---
+
+In short — `redis-cli` is like a **remote control** for Redis:
+📦 Redis is the database,
+⌨️ `redis-cli` is how you talk to it directly.
+
+---
+
+If you want, I can now show you **how to use `redis-cli` to connect to a Cloud Redis instance** so you can control it from your laptop. Would you like me to go step-by-step?
+
 
 Here’s your **step-by-step guide**:
 
