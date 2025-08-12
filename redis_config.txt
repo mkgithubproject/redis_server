@@ -26,9 +26,9 @@ sudo systemctl restart redis
 
 
 ### mac
-brew services start redis\
-brew services restart redis\
-brew services list\
+brew services start redis
+brew services restart redis
+brew services list
 brew services stop redis
 
 
