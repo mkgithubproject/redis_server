@@ -1,5 +1,6 @@
 
 ## local redis server , think like mongodb server
+localmongo , local redis server db, mongo cli redis cli, cloud mongodb cloud redis , redis insight just like mongo compass, 
 Step 1: Update Your System
   -> sudo apt update
 
