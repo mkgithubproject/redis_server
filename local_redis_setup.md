@@ -73,6 +73,46 @@ If you want, I can now show you **how to use `redis-cli` to connect to a Cloud R
 
 
 Here’s your **step-by-step guide**:
+On macOS with **Homebrew**, there’s no real difference —
+`brew install redis` is the correct and standard command.
+
+---
+
+### Why there’s confusion
+
+* In **Linux**, people sometimes install Redis with:
+
+  ```bash
+  sudo apt install redis-server
+  ```
+
+  because `redis-server` is the main package name in APT.
+
+* In **Homebrew**, the package is just called **`redis`**.
+  When you run:
+
+  ```bash
+  brew install redis
+  ```
+
+  Homebrew installs **both**:
+
+  * `redis-server` → the actual database server process
+  * `redis-cli` → the command-line interface for talking to the server
+
+---
+
+✅ **So on your Mac, you should just run:**
+
+```bash
+brew install redis
+```
+
+No need for `brew install redis-server` — that’s not a valid Homebrew formula.
+
+---
+
+If you want, I can explain **what happens under the hood when you run `brew install redis`** so you know exactly what’s being added to your system.
 
 ---
 
