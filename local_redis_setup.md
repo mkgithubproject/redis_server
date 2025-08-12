@@ -113,6 +113,76 @@ No need for `brew install redis-server` — that’s not a valid Homebrew formul
 ---
 
 If you want, I can explain **what happens under the hood when you run `brew install redis`** so you know exactly what’s being added to your system.
+Your Redis server (`redis-server`) is installed (version 8.2.0), but the Redis **CLI client** (`redis`) is not found on your Mac.
+
+---
+
+### Why?
+
+* The Redis CLI tool is called `redis-cli`, **not** `redis`.
+* You likely don’t have `redis-cli` installed or it’s not in your system PATH.
+
+---
+
+### How to check if `redis-cli` is installed?
+
+Run:
+
+```bash
+redis-cli --version
+```
+
+If you get `command not found`, you need to install `redis-cli`.
+
+---
+
+### How to install `redis-cli` on Mac without Homebrew?
+
+If you don’t want to use Homebrew, you can:
+
+1. **Download Redis source and compile** (not recommended if you want just the CLI).
+
+2. **Install only redis tools with Homebrew** (easy way):
+
+```bash
+brew install redis
+```
+
+That will install both `redis-server` and `redis-cli`.
+
+---
+
+### If you want just `redis-cli`:
+
+You can download the official Redis binaries from [https://redis.io/download](https://redis.io/download) or use package managers.
+
+---
+
+### Quick fix using Homebrew (recommended if you have it):
+
+```bash
+brew install redis
+```
+
+Then run:
+
+```bash
+redis-cli --version
+redis-cli ping
+```
+
+---
+
+### Summary:
+
+* `redis` command doesn’t exist — you want `redis-cli`.
+* `redis-cli` is the Redis command-line client tool.
+* Install it (via Homebrew or source) to interact with Redis from terminal.
+
+---
+
+If you want, I can guide you through installing `redis-cli` step-by-step!
+
 
 ---
 
