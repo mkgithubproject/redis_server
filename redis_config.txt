@@ -9,9 +9,9 @@ Step 2: Install Redis Server
 
 Step 3: Enable and Start Redis
   -> Enable Redis to start on boot:
-       -> sudo systemctl enable redis
+       -> sudo systemctl enable redis // brew services start redis in mac
        -> Start the Redis service:
-            -> sudo systemctl start redis // runs the server in backgroud , if u do redis-server on terminal it will go down when u shut  the                                                 //termianal
+            -> sudo systemctl start redis // runs the server in backgroud , if u do redis-server on terminal it will go down when u shut  the                                                 //termianal , brew services restart redis (mac)
 
  Step 4: Check if Redis is Running
   -> sudo systemctl status redis
